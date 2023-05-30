@@ -14,5 +14,9 @@ public class IntExample1 {
 		System.out.println(num4);
 		System.out.println(num5);
 
+		// 1234567890123은 int로 표현 할 수 없는 큰 숫자
+		// long 타입에 큰 숫자를 저장할 경우 리터럴에 L 또는 l를 반드시 붙어야 함
+		long num6 = 1234567890123L;
+
 	}
 }
