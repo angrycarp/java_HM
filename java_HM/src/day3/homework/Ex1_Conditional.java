@@ -23,10 +23,12 @@ public class Ex1_Conditional {
 		char ch;
 		ch = sc.next().charAt(0);
 		
-		char result;
-		result = ch == W ? true : false;
+		// W일때 true, M일때 false로 바꿔주는 조건연산자가 필요
 		
-		System.out.println("Are you a women? " + );
+		
+	
+		
+		System.out.println(ch);
 		
 		
 		
