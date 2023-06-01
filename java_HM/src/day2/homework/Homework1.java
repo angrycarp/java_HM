@@ -17,7 +17,8 @@ public class Homework1 {
 		
 		System.out.println("" + num1 + str + num2);
 
-
+		sc.close();
+		
 	}
 
 		
