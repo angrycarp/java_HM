@@ -11,7 +11,7 @@ public class NumberEx {
 			num = num / 2;
 		}
 		else {
-			num = (num + 1)/2;
+			num = num + 1;
 		}
 		
 		System.out.println(num);
