@@ -10,8 +10,7 @@ public class TeamLeaderEx {
 		 * 
 		 * 	학생 번호가 주어졌을 때 조장인지 조원인지 판별하는 코드를 작성하세요 
 		 * 
-		 * 	?? 걍 3의 배수 찾으란거 아님?
-		 * 	왤케 복잡하게 씀 ?
+		 *	switch 문으로 해보래 .
 		 */
 		
 		Scanner sc = new Scanner(System.in);
@@ -19,11 +18,14 @@ public class TeamLeaderEx {
 		System.out.println(" Input positive number :");
 		i = sc.nextInt();
 		
-		if(i % 3 == 0 && i <= 30) {
-			System.out.println(i + " is leader!");
-		}
-		else {
-			System.out.println(i + " is not leader");
+		switch(i % 3){
+		case 0 : 
+			System.out.println("Leader!");
+			break;
+		default : 
+			System.out.println("Not leader");
+			break;
+
 		}
 		sc.close();		
 	}

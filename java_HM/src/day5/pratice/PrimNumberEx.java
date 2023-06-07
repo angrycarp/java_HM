@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PrimNumberEx {
 
 	public static void main(String[] args) {
-		// 정수 num를 입력받아 num가 소수인지 아닌지를 판별하느 코드를 작성하세요.
+		// 정수 num를 입력받아 num가 소수인지 아닌지를 판별하는 코드를 작성하세요.
 		// 소수 : 약수가 1과 자기 자신밖에 없는 수
 		// 소수 : 2,3,5,7,11,13 등
 		
