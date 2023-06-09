@@ -10,7 +10,7 @@ public class MethodLCMEx {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Input 2 number :");
-		int num1, num2, i = 1, gcd = 0, lcm = 0;
+		int num1, num2, i = 1, gcd = 0;
 		num1 = sc.nextInt();
 		num2 = sc.nextInt();
 		
