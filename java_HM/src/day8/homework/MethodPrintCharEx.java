@@ -23,7 +23,7 @@ public class MethodPrintCharEx {
 
 	}
 	public static void Printer(char ch, int num) {
-		int i = 1;
+		int i;
 		for(i = 1; i <= num; i++) {
 			System.out.print(ch);
 		}

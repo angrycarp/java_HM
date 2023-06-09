@@ -21,5 +21,4 @@ public class MethodScoreEx {
 	public static double Average(int num1, int num2, double num3) {
 		return (num1 + num2 + num3) / 3;
 	}
-
 }

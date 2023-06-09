@@ -17,9 +17,7 @@ public class MethodArtithmeticEx {
 		num1 = sc.nextInt();
 		ari = sc.next().charAt(0);
 		num2 = sc.nextInt();
-		
-		// ari 값에 따라서 add, sub, mul, div, mod 함수를 선택하는 if문을 만들어라
-		
+				
 		if(ari == '+') {
 			System.out.println("" + num1 + " " + ari + " "+ num2 + " = " + Add(num1,num2));
 		}
