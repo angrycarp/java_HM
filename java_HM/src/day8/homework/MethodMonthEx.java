@@ -17,10 +17,10 @@ public class MethodMonthEx {
 		int month;
 		month = sc.nextInt();
 		
-		System.out.println(month + " is " + Season(month));		
+		System.out.println(month + " is " + Monthname(month));		
 		
 	}
-	public static String Season(int num) {
+	public static String Monthname(int num) {
 		String month = " ";
 		if(num == 1) {
 			month = "January";

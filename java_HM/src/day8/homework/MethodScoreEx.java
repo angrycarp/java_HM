@@ -9,16 +9,34 @@ public class MethodScoreEx {
 		// 단 메서드 이용
 		
 		Scanner sc = new Scanner(System.in);
-		int kor, eng, math;
-		System.out.println("Input kor, eng, math score :");
-		kor = sc.nextInt();
-		eng = sc.nextInt();
-		math = sc.nextInt();
+		int score;
+		System.out.println("Input score :");
+		score = sc.nextInt();
 		
-		System.out.println("Your average is " + Average(kor, eng, math));
+		
+		System.out.println("Your score is " + Grade(score));
 
 	}
-	public static double Average(int num1, int num2, double num3) {
-		return (num1 + num2 + num3) / 3;
+	public static char Grade(int num1) {
+		char grade = ' ';
+		if(num1 >= 90 && num1 < 100) {
+			grade = 'A';
+		}
+		else if(num1 >= 80 && num1 < 90) {
+			grade = 'B';
+		}
+		else if(num1 >= 70 && num1 < 80) {
+			grade = 'C';
+		}
+		else if(num1 >= 60 && num1 < 70) {
+			grade = 'D';
+		}
+		else if(num1 >= 0 && num1 < 60) {
+			grade = 'E';
+		}
+		else {
+			grade = 'X';
+		}
+		return grade;
 	}
 }

@@ -33,6 +33,9 @@ public class MethodArtithmeticEx {
 		else if(ari == '%') {
 			System.out.println("" + num1 + " " + ari + " " + num2 + " = " + Mod(num1,num2));
 		}
+		else {
+			System.out.println("Wrong operation");
+		}
 	sc.close();	
 
 	}
