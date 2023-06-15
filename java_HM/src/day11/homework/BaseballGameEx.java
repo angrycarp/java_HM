@@ -2,6 +2,7 @@ package day11.homework;
 
 import java.util.Scanner;
 
+import array.Array;
 import day11.practice.ArrayRadomEx2;
 
 public class BaseballGameEx {
@@ -20,14 +21,16 @@ public class BaseballGameEx {
 		Scanner sc = new Scanner(System.in);
 		
 		ArrayRadomEx2.createRandomArray(1, 9, baseball);
-		ArrayRadomEx2.printArray(baseball);
 		
 		while(scount != 3) {
 			System.out.println("Input 3 nums : ");
-			throw1[0] = sc.nextInt();
-			throw1[1] = sc.nextInt();
-			throw1[2] = sc.nextInt();
-
+			for(int i = 0; i < 3; i++) {
+				throw1[i] = sc.nextInt();
+			}
+			if(Array.arryCheck(throw1)) {
+				System.out.println("You must not enter the same number!");
+				continue;
+			}
 			for(int i = 0; i < 3; i++) {
 				for(int j = 0; j < 3; j++) {
 					if(baseball[i] == throw1[j] && i != j) {
@@ -61,4 +64,3 @@ public class BaseballGameEx {
 		}
 	}
 }
-
