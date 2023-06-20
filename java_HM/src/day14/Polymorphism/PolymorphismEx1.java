@@ -1,9 +1,7 @@
 package day14.Polymorphism;
 
-import java.rmi.Remote;
-
 public class PolymorphismEx1 {
-	
+
 	public static void main(String[] args) {
 		/* 매개변수의 다형성 
 		 * 리모컨으로 여러 제품의 전원을 켜는 예제

@@ -2,9 +2,12 @@ package day13.homework.controller;
 
 import java.util.Scanner;
 
+import day13.homework.vo.VocabularyNote;
+
 public class VocabularyNoteController {
+	
 	private Scanner sc = new Scanner(System.in);
-	private VocabularyNoteController note = new VocabularyNoteController();
+	private VocabularyNote note = new VocabularyNote();
 
 	public void run() {
 		//반복(종료를 선택하기전까지) => 무조건 1번은 실행
@@ -219,4 +222,3 @@ public class VocabularyNoteController {
 		System.out.print("서브 메뉴 선택 : ");
 	}
 }
-
