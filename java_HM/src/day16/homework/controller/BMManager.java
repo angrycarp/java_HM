@@ -144,6 +144,6 @@ public class BMManager {
 		default:
 			System.out.println("잘못된 메뉴!");
 		}
-		System.out.println("현재 재고량은 사이다 " + ciderAmount + " 콜라 " + colaAmount + " 환타 " + fantaAmount " 개 입니다." );
+		System.out.println("현재 재고량은 사이다 " + ciderAmount + " 콜라 " + colaAmount + " 환타 " + fantaAmount + " 개 입니다." );
 	}
 }
