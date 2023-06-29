@@ -1,4 +1,4 @@
-package day20.practice.vo;
+package day20.practice.student.vo;
 
 import java.util.Objects;
 
@@ -25,7 +25,12 @@ public class Student {
 	public int hashCode() {
 		return Objects.hash(classNum, grade, num);
 	}
+	public void update(int grade, int classNum, int number, String name) {
+		this.grade = grade;
+		this.classNum = classNum;
+		this.num = number;
+		this.name = name;
+	}
 	
 	
-
 }
