@@ -1,8 +1,12 @@
 package day25.practice.student.vo;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Serializable {
+
+	
+	private static final long serialVersionUID = 3349834132614870043L;
 	private String name, major;
 	private String num;
 
@@ -23,6 +27,11 @@ public class Student {
 			return false;
 		Student other = (Student) obj;
 		return Objects.equals(major, other.major) && Objects.equals(name, other.name) && num == other.num;
+	}
+	
+	@Override
+	public String toString() {
+		return "학번 : " + num + "\n이름 : " + name + "\n전공 : " + major;
 	}
 
 

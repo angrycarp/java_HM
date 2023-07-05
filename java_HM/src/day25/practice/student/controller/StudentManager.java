@@ -1,5 +1,12 @@
 package day25.practice.student.controller;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -26,6 +33,7 @@ public class StudentManager implements Program {
 	@Override
 	public void run() {
 		int menu;
+		load();
 		do {
 			System.out.println("===========");
 			printMenu();
@@ -33,6 +41,43 @@ public class StudentManager implements Program {
 			runMenu(menu);
 			System.out.println("===========");
 		}while(menu != EXIT);
+		save();
+
+
+		
+	}
+
+	private void save() {
+		// 학생 정보를 저장 
+		
+		try(
+				FileOutputStream fos = new FileOutputStream("src/day25/student/student.txt");
+				ObjectOutputStream oos = new ObjectOutputStream(fos)){
+					for(Student std : list) {
+						oos.writeObject(std);
+					}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		
+	}
+
+	private void load() {
+		try(ObjectInputStream ois 
+				= new ObjectInputStream(new FileInputStream("src/day25/student/student.txt"))){
+				while(true) {
+					Student tmp = (Student)ois.readObject();
+					list.add(tmp);
+				}
+			} catch (FileNotFoundException e) {
+				System.out.println("불러올 파일이 없습니다.");
+			} catch (EOFException e) {
+				System.out.println("불러오기 완료!");
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				System.out.println("Student 클래스를 찾을 수 없습니다.");
+			} 
 		
 	}
 
@@ -43,7 +88,7 @@ public class StudentManager implements Program {
 			insert();
 			break;
 		case 2:
-			print();
+			print(list);
 			break;
 		case 3:
 			System.out.println("EXIT!!");
@@ -77,6 +122,7 @@ public class StudentManager implements Program {
 		//추가 성공하면 추가했다고, 실패하면 실패했다고 콘솔에 출력
 		System.out.println("Insert fail!!");		
 		sc.close();
+
 	}
 
 	private void print(List<Student> list) {
