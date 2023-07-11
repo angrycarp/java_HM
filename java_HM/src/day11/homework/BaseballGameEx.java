@@ -14,11 +14,12 @@ public class BaseballGameEx {
 		 * 	S : 같은 숫자가 있고 위치가 같음
 		 * 	3O : 일치하는 숫자가 하나도 없음
 		 **/
+		Scanner sc = new Scanner(System.in);
+
 		
 		int [] baseball = new int[3];
 		int [] throw1 = new int[3];
 		int scount = 0, bcount = 0;
-		Scanner sc = new Scanner(System.in);
 		
 		ArrayRadomEx2.createRandomArray(1, 9, baseball);
 		
