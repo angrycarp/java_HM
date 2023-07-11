@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입 예제</title>
+</head>
+<body>
+	<!--
+		회원가입 페이지를 작성하세요.
+		- 아이디, 비번, 비번확인, 전화번호, 이름, 이메일, 성별을 입력
+	 -->
+	<form action="" method="post">
+		<label for="input_id"> </label>
+		<input type="text" name="id" id ="input_id" placeholder="아이디를 입력하세요."> <br>
+		<input type="password" name="pw" placeholder="비밀번호을 입력하세요."> <br>
+		<input type="password" name="pw2" placeholder="비밀번호을 다시 입력하세요."> <br>
+		<!-- 비밀번호 확인 // 위 비밀번호 입력창과 같은 값을 입력했는지 확인 하는 창 -->
+		<input type="email" name="email" placeholder="이메일을 입력하세요"> <br>
+		<input type="tel" name="tel" placeholder="전화번호를 입력하세요"> <br>
+		<input type="url" name="url" placeholder="url을 입력하세요"> <br>
+		성별 : 
+		<select name="sexuality">
+			<option value="0">남자</option>
+			<option value="1">여자</option>
+		</select>
+		<br>
+		<input type="button" value="회원가입">
+	</form>
+	
+</body>
+</html>
