@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>검색창 예제</title>
+	<style>
+		.container{
+			width: 400px; height: 50px; box-sizing: border-box;
+			border: 2px solid green; position: relative;
+			border-radius: 25px;
+		}
+		.container::after{
+			content: ''; display: block; clear: both;
+		}
+		.box1{
+			width: calc(100% - 60px); height: 100%; float: left;
+			padding: 5px; padding-left: 20px;
+		}
+		.inner-box{
+			width: calc(100% - 20px); height: calc(100% - 10px); float: left;
+			box-sizing: border-box; border: 2px solid darkcyan;
+		}
+		.box2{
+			width: 50px; height: 100%; float:right; background-color: green;
+			position: absolute; top: 0; right: 0; border: 0;
+			border-radius: 0 25px 25px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1">
+			<div class="inner-box"></div>
+		</div>
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

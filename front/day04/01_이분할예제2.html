@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이분할 예제2</title>
+	<style>
+		.container{ width: 500px; height: 500px; border: 1px solid red;}
+		.container::after{
+			content: ''; display: block; clear: both;
+		}
+		.box{
+			width: 235px; height: 480px; margin-top: 10px; margin-left: 10px;
+			background-color: blue;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box box1">1</div>
+		<div class="box box2"></div>
+	</div>
+	
+</body>
+</html>

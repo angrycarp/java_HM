@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*
+		translate
+		- 요소를 이동시키는 함수
+		scale
+		- 요소를 확대/축소 시키는 함수
+		 */
+		.box{
+			width: 100px; height: 100px; margin-top: 50px;
+			background: hotpink; 
+		}
+		.box1:hover{
+			transform: translateX(30px);
+		}
+		.box2:hover{
+			transform: translateY(30px);
+		}
+		.box3:hover{
+			transform: translate(30px, 30px);
+		}
+		.box4:hover{
+			transform: scaleX(1.5);
+		}
+		.box5:hover{
+			transform: scaleY(1.5);
+		}
+		.box6:hover{
+			transform: scale(1.5);
+		}
+		.box7:hover{
+			transform: rotate(315deg);
+		}
+		.box8:hover{
+			transform: rotateX(60deg);
+		}
+		.box9:hover{
+			transform: rotateY(60deg);
+		}
+		.box10:hover{
+			transform: rotateZ(60deg);
+		}
+		.box11:hover{
+			transform: skewX(45deg);
+		}
+		.box12:hover{
+			transform: skewY(45deg);
+		}
+		.box13:hover{
+			transform: skew(30deg,30deg);
+		}
+		body{
+			perspective: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box box1">x축 이동</div>
+	<div class="box box2">y축 이동</div>
+	<div class="box box3">x,y축 이동</div>
+	<div class="box box4">가로 확대</div>
+	<div class="box box5">세로 확대</div>
+	<div class="box box6">가로,세로 확대</div>
+	<div class="box box7">회전</div>
+	<div class="box box8">x축 회전</div>
+	<div class="box box9">y축 회전</div>
+	<div class="box box10">z축 회전</div>
+	<div class="box box11">x축 비틈</div>
+	<div class="box box12">y축 비틈</div>
+	<div class="box box13">x,y축 비틈</div>
+</body>
+</html>
