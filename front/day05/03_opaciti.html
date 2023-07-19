@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>투명도 예제</title>
+	<style>
+		/* opacity
+		- 요소의 투명도를 조절하는 속성
+		- 0에서 1사이의 값을 이용. 0은 완전투명. 1은 완전 불투명
+		- 부모요소의 opacity가 1이 아니면 자식 요소의 opacity를 1로 해도 1로 적용되지 않음.
+		*/
+		main{ height: 500px; background-color: hotpink;}
+		.box{
+			position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+			background-color: black; opacity: 0.3;
+		}
+		.inner-box{
+			color: #fff; text-align: center; font-size: 30px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="inner-box"></div>
+	</div>
+	<main>
+		컨텐츠
+	</main>
+</body>
+</html>

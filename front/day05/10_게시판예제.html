@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>게시판 예제</title>
+	<style>
+		table, tr, td, th{
+		border: 1px solid black;
+		border-collapse: collapse;
+		border-width: 1px 0;
+		text-align: center;
+		}
+		.title{
+			width: 150px;
+			height: 50px;
+		}
+		.content, .list, .item{
+			width: 150px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead class="title">
+			<th class="title-item">번호</th>
+			<th class="title-item">제목</th>
+			<th class="title-item">작성자</th>
+			<th class="title-item">조회수</th>
+		</thead>
+		<tfoot class="content">
+			<tr class="list">
+				<th class="item">2</th>
+				<th class="item">환영인사</th>
+				<th class="item">홍길동</th>
+				<th class="item">5</th>
+			</tr>
+			<tr class="list">
+				<th class="item">1</th>
+				<th class="item">공지사항</th>
+				<th class="item">관리자</th>
+				<th class="item">10</th>	
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hover 예제</title>
+	<style>
+		.box{
+			width: 200px; height: 200px; border: 3px solid black;
+			overflow: hidden;
+		}
+		img{
+			height: 200px; 
+			transform: translateY(200px) translateX(-40px);
+		}
+		.link:hover{
+			transform: translateY(-200px); transition: 2.5s;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="link">
+			<img src="../image/강아지.jpg" alt="개미지">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>menu 예제2</title>
+	<style>
+		.box{
+			width: 200px; height: 200px; border: 3px solid black;
+			overflow: hidden;
+		}
+		img{
+			height: 100%; 
+			/* 중앙 정렬은 됬는데 hover 기준점이 달라져써용 */
+			transform: translateX(-50%); margin-left: 50%;
+		}
+		img:hover{
+			transform: scale(3); transition: transform 3s;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../image/강아지.jpg" alt="개미지">
+	</div>
+</body>
+</html>
