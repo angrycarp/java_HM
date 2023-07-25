@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex메뉴 예제</title>
+	<style>
+		body{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.flex-container{
+			background-color: black;
+			height: 40px; width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+		}
+		.box{
+			width: 100%; display: block;
+			color: white;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		.box-Logo{
+			width: 400%;
+			color: white; font-size: 30px;
+			text-align: left;
+		}
+		.box-more{
+			width: 400%;
+			color: white; font-size: 13px;
+			text-align: right;
+		}
+		.box:hover{
+			text-decoration: underline;
+			transform: scale(1.2);
+			transition: transform 0.7s;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="box-Logo">Logo</div>
+		<div class="box">메뉴1</div>
+		<div class="box">메뉴2</div>
+		<div class="box">메뉴3</div>
+		<div class="box-more">더보기</div>
+	</div>	
+</body>
+</html>
