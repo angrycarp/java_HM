@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<style>
+		.container{
+			display: flex;
+		}
+		.btn1{
+			margin-right: 5px;
+			width: 30px; height: 10px;
+			border: 1px solid blue;
+		}
+		.btn2{
+			width: 30px; height: 10px;
+			border: 1px solid red;
+		}
+		.box{
+			width: 300px; height: 300px;
+		}
+		.bd-blue{ border: 2px solid blue;}
+		.bd-red{ border: 2px solid red;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="btn btn1"></div>
+		<div class="btn btn2"></div>
+	</div><br>
+	<div class="box"></div>
+	<script>
+		$('.btn1').click(function(){
+			$('.box').removeClass('bd-red');
+			$('.box').addClass('bd-blue');
+		});
+		$('.btn2').click(function(){
+			$('.box').removeClass('bd-blue');
+			$('.box').addClass('bd-red');
+		});
+	</script>
+</body>
+</html>

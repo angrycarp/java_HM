@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>리스트 예제</title>
+	<script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+	<ul class="con">
+		<li class="list1">항목1</li>
+		<li class="list2">항목2</li>
+		<li class="list3">항목3</li>
+	</ul>	
+	<button class="btn btn1">버튼1</button>
+	<button class="btn btn2">버튼2</button>
+	<button class="btn btn3">버튼3</button>
+	<script>
+		/*
+		$('.btn1').click(()=>{
+			$('li').css('background-color','transparent');
+			$('li').eq(0).css('background-color','yellow');
+		});
+		$('.btn2').click(()=>{
+			$('li').css('background-color','transparent');
+			$('li').eq(1).css('background-color','blue');
+		});
+		$('.btn3').click(()=>{
+			$('li').css('background-color','transparent');
+			$('li').eq(2).css('background-color','red');
+		});
+		*/
+		$('.btn').click(function(){
+			$('li').css('background-color','transparent');
+			// 눌린 버튼이 .btn중 몇 번쨰인지 가져옴
+			let index = $(this).index()-1;
+			$('li').eq(index).css('background-color','yellow');
+		})
+	</script>
+</body>
+</html>
