@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+		[class^=error]{
+			color: red; margin-bottom: 10px;
+		}
+		.container{
+			position: relative;
+			width: 310px; height: 310px;
+			background-color: rgb(243, 239, 239);
+			text-align: center;
+			line-height: 20px;
+			padding: 50px 10px 10px 10px;
+			font-size: 14px;
+		}
+		.form-group{
+			padding-top: 20px;
+			clear: both; content: ''; display: block;
+		}
+		.box-text{
+			float: left; font-weight: bold;
+		}
+		.box-dash{
+			float: right;
+			width: 180px; 
+			border-bottom: dashed 1px;
+		}
+		.form-control{
+			background-color: rgb(243, 239, 239);
+			border: 0;
+		}
+		.box-notice{
+			width: 230px; display: none;
+			transform: scale(0.8);
+			float: right;
+			color: gray; font-size: 5px; margin-top: 1px;
+		}
+		.btn{
+			position: absolute;
+			width: 310px; height: 42px;
+			background-color: rgb(165, 216, 165);
+			margin: 80px -80px;
+			font-size: 16px; font-weight: bold;
+			color: rgb(57, 116, 96);
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form action="">
+			<div class="form-group">
+				<div class="box-text">아이디</div>
+				<div class="box-dash">
+					<input type="text" class="form-control" name="id" required >
+				</div>
+			</div>
+			<div class="error-id"></div>
+			<div class="form-group">
+				<div class="box-text">패스워드</div>
+				<div class="box-dash">
+					<input type="password" class="form-control" name="pw" id="pw" required >
+				</div>
+			</div>
+			<div class="box-notice">영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자</div>
+			<div class="error-pw"></div>
+			<div class="form-group">
+				<div class="box-text">패스워드 확인</div>
+				<div class="box-dash">
+					<input type="password" class="form-control" name="pw2" required >
+				</div>
+			</div>
+			<div class="error-pw2"></div>
+			<div class="form-group">
+				<div class="box-text">이메일</div>
+				<div class="box-dash">
+					<input type="text" class="form-control" name="email" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@">
+				</div>
+			</div>
+			<div class="error-email"></div>
+			<div class="form-group">
+				<div class="box-text">주소</div>
+				<div class="box-dash">
+					<input type="text" class="form-control" name="adress" >
+				</div>
+			</div>
+			<button class="btn">가 입</button>
+		</form>
+	</div>
+	<script>
+		$('#pw').click(function(){
+			$('.box-notice').show();
+		});
+	</script>
+</body>
+</html>

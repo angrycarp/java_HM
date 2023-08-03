@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<style>
+		.container{
+			position: relative;
+			width: 310px; height: 310px;
+			background-color: rgb(243, 239, 239);
+			text-align: center;
+			line-height: 20px;
+			padding: 20px;
+			font-size: 14px;
+		}
+		.box-main{
+			padding-top: 40px;
+		}
+		.box-text{
+			float: left; font-weight: bold;
+		}
+		.box-dash{
+			width: 200px; float: right;
+			border-bottom: dashed 1px;
+		}
+		.input{
+			width: 200px;
+			background-color: rgb(243, 239, 239);
+			border: 0;
+		}
+		.box-notice{
+			width: 230px;
+			transform: scale(0.8);
+			float: right;
+			color: gray; font-size: 5px; margin-top: 1px;
+		}
+		.box-btn{
+			position: absolute;
+			width: 330px; height: 42px;
+			background-color: rgb(165, 216, 165);
+			margin: 55px -80px;
+			font-size: 16px; font-weight: bold;
+			color: rgb(57, 116, 96);
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box-main">
+			<form action="submit">
+				<label>
+					<div class="box-text">아이디</div>
+					<div class="box-dash">
+						<input type="text" class="input" name="id" required>
+					</div>
+				</label>
+				<br><br>
+				<label>
+					<div class="box-text">패스워드</div>
+					<div class="box-dash">
+						<input type="password" class="input" name="pw" required>
+					</div>
+				</label>
+				<br>
+				<div class="box-notice">영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자</div>
+				<br><br>
+				<label>
+					<div class="box-text">패스워드 확인</div>
+					<div class="box-dash">
+						<input type="password" class="input" name="pw2" required>
+					</div>
+				</label>
+				<br><br>
+				<label>
+					<div class="box-text">이메일</div>
+					<div class="box-dash">
+						<input type="email" class="input" name="email" value="@">
+					</div>
+				</label>
+				<br><br>
+				<label>
+					<div class="box-text">주소</div>
+					<div class="box-dash">
+						<input type="adress" class="input" name="adress" >
+					</div>
+				</label>
+			</div>
+			<input type="button" class="box-btn" value="가 입" form="submit">
+		</form>
+	</div>
+	<script>
+		$('[name=pw]').change(checkPw);
+		$('[name=pw2]').change(checkPw2);
+		$('[name=email]').change(checkEmail);
+
+		$('form').submit(function(){
+			let ok = true;
+
+			if(!checkPw()){
+				ok = false;
+			}
+			if(!checkPw2()){
+				ok = false;
+			}
+			if(!checkEmail()){
+				ok = false;
+			}
+
+			return ok;
+		});
+		function checkPw(){
+			let pw = $('[name=pw]').val();
+			let regex = /^[a-zA-Z0-9!@#$%^&*()-_=+]{8,32}$/;
+			if(regex.test(pw)){
+				$('.error-pw').text('');
+				return true;
+			}else{
+				$('.error-pw').text('비밀번호는 영문,숫자, 특수문자(!@#$) 8자에서 20자이어야 합니다.');
+				return false;
+			}
+		}
+		function checkPw2(){
+			let pw = $('[name=pw]').val();
+			let pw2 = $('[name=pw2]').val();
+			if(pw == pw2){
+				$('.error-pw2').text('');
+				return true;
+			}else{
+				$('.error-pw2').text('비밀번호와 일치하지 않습니다.');
+				return false;
+			}
+		}
+		function checkEmail(){
+			let email = $('[name=email]').val();
+			// + : 1개이상. () : 패턴
+			let regex = /^[a-zA-Z0-9_]+@[a-zA-Z0-9]+(.[a-zA-Z0-9]+)+$/;
+			if(regex.test(email)){
+				$('.error-email').text('');
+				return true;
+			}else{
+				$('.error-email').text('이메일 형식에 맞지 않습니다.');
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
