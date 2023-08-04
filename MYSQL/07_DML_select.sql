@@ -56,6 +56,28 @@ order by 속성명1 [정렬방법] [, 속성명2 정렬방법, ...]
 	- BESE : 내림차순. 행이 아래로 갈수록 값이 작아짐.
 => 속성명 1을 정렬방법을 기준으로 정렬하고, 속성명1의 값이 같으면 속성명2를 정렬방법을 기준으로 정렬...
 */
+/*
+LIMIT : 행(튜플)을 원하는 위치부터 원하는 개수를 가져오기 위한 방법
+- 위치가 order by절 뒤, 제일 마지막에 위치해야 함.
+limit A;
+=> 0부터 A-1번지까지 가져옴
+limit A:B;
+=> A번지부터 B개 가져옴
+*/
+/*
+GROUP BY : 같은 값을 가지는 행들을 묶어서 평균을 내거나 개수를 세는 등의 작업을 할 때 사용
+HAVING절 : 집계함수에 조건을 걸때 사용
+- 위치는 where절 다음. order by 앞
+자주사용하는 집계함수
+- avg(속성 또는 식) : 평균
+- min(속성 또는 식) : 최소값
+- max(속성 또는 식) : 최대값
+- count(속성) : 행(튜플)의 개수
+- count(distinct 속성) : 중복을 제거한 행의 개수
+- sum(속성 또는 식) : 합
+- 
+*/
+
 -- 컴퓨터공학과 학생들을 조회하는 쿼리
 SELECT 
     *
@@ -106,5 +128,33 @@ select * from course where subject_code = any(select code from subject where poi
 select * from course where subject_code != all(select code from subject where title in('글쓰기', '영어'));
 select * from course where subject_code in(select code from subject where title != '글쓰기' && title != '영어');
 
--- 학생 정보를 이름순 오름차순으로 정렬하여 조회
-select * from student order by name;
+-- 학생 정보를 이름순으로 오름차 정렬하여 조회
+select * from student order by name asc;
+-- 학생 정보를 이름순으로 내림차 정렬하여 조회
+select * from student order by name desc;
+-- 학생 정보를 전공, 이름순으로 오름차순으로 정렬하여 조회
+select * from student order by major asc, name asc;
+-- 학생들이 소속된 과를 조회하는 쿼리
+select distinct major from student;
+-- 학생들 정보를 학번순으로 오름차 정렬 후, 위에서 2명의 학생 정보를 조회하는 쿼리
+select * from student order by num asc limit 2;
+-- 학생들 정보를 학번순으로 오름차 정렬 후, 위에서 3번째, 4번째의 학생 정보를 조회하는 쿼리
+select * from student num limit 2, 2;
+-- 학생들 정보를 학번순으로 오름차 정렬 후, 2명씩 보여줄 때 3번째 페이지에 있는 학생 정보를 조회하는 쿼리
+select * from student limit 4,2;
+
+-- 각 과별 학생 수를 조회
+set global sql_mode=(select replace(@@sql_mode,  'ONLY_FULL_GROUP_BY',''));
+-- 각 과별 학생수를 조회
+select count(num) as 학생수 from student group by major;
+-- 과목별 수강 학생수를 과목코드, 수강생수로 조회하는 쿼리
+select subject_code as 과목코드, count(num) as 수강생수 from course group by subject_code;
+-- 과목별 수강생 수가 4명 이상인 과목의 과목코드를 조회하는 쿼리
+select
+	subject_code as 과목코드, count(*) as 수강생수
+from
+	course 
+group by 
+	subject_code
+having
+	count(*) >= 4;
