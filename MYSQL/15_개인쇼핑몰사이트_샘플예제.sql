@@ -22,3 +22,39 @@ INSERT INTO `OPTION`(OP_NAME, OP_PR_CODE) VALUES('무선', 'ABC001'),('유선', 
 SELECT * FROM PRODUCT
 	JOIN `OPTION` ON PR_CODE = OP_PR_CODE
     WHERE PR_CODE = 'ABC001';
+    
+-- 제품 코드가 ABC001인 제품 중에서 유선제품이 10개 들어오고, 무선제품이 5개 들어왔을 떄 사용해야 하는 쿼리
+
+UPDATE `option` 
+SET 
+    op_amount = 10
+WHERE
+    op_pr_code = 'abc001' AND op_name = '유선';
+UPDATE `option` 
+SET 
+    op_amount = 5
+WHERE
+    op_pr_code = 'abc001' AND op_name = '무선';
+    
+-- abc123 회원이 배송지를 다음과 같이 등록(배송지명 : 집, 주소 : 서울시 강남구 123번지, 
+-- 상세주소 : KH아파트 101동 101호, 우편번호 : 12345)하는 쿼리
+
+insert into address(ad_name, ad_addr, ad_addr_detail, ad_post, ad_me_id)
+	value('집', '서울시 강남구 123번지', 'KH아파트 101동 101호', '12345', 'abc123');
+    
+-- abc123회원이 abc001 제품 중 유선을 3개 장바구니에 담았을 때 쿼리 
+insert into basket(ba_amount, ba_me_id, ba_op_num)
+	select
+		3, 'abc123', op_num
+	from `option`
+    where
+		op_pr_code = 'abc001' and op_name='유선';
+
+-- abc123회원이 abc001 제품 줌 유선 1개를 장바구니에 담았을 때 쿼리
+update basket
+set
+	ba_amount = 1
+where 
+	ba_me_id = 'abc123' and
+    ba_op_num = (select op_num from `option` where op_pr_code = 'abc123' and op_name = '유선');
+ 
