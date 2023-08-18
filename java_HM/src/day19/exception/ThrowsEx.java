@@ -1,4 +1,4 @@
-package day19.exception;
+package src.day19.exception;
 
 public class ThrowsEx {
 
@@ -46,3 +46,10 @@ public class ThrowsEx {
 	}
 	
 }
+
+
+
+
+
+
+

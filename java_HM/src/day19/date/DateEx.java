@@ -1,4 +1,4 @@
-package day19.date;
+package src.day19.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

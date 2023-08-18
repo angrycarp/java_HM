@@ -1,4 +1,4 @@
-package day23.stream;
+package src.day23.stream;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -61,3 +61,9 @@ public class StreamEx1 {
 	}
 
 }
+
+
+
+
+
+

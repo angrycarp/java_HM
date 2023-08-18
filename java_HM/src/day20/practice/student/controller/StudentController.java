@@ -1,10 +1,10 @@
-package day20.practice.student.controller;
+package src.day20.practice.student.controller;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import day20.practice.student.vo.Student;
+import src.day20.practice.student.vo.Student;
 
 public class StudentController implements Program {
 
@@ -148,7 +148,6 @@ public class StudentController implements Program {
 		
 	}
 }
-
 
 
 

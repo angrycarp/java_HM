@@ -1,4 +1,4 @@
-package day14.Polymorphism;
+package src.day14.polymorphism;
 
 public class PolymorphismEx1 {
 
@@ -107,3 +107,12 @@ class AirConditioner1 extends HomeAppliances{
 class Radio1 extends HomeAppliances{
 	double frequency;
 }
+
+
+
+
+
+
+
+
+

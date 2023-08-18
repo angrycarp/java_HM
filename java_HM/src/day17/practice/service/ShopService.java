@@ -1,8 +1,8 @@
-package day17.practice.service;
+package src.day17.practice.service;
 
-import day17.practice.vo.Customer;
-import day17.practice.vo.Product;
-import day17.practice.vo.Sales;
+import src.day17.practice.vo.Customer;
+import src.day17.practice.vo.Product;
+import src.day17.practice.vo.Sales;
 
 public interface ShopService {
 

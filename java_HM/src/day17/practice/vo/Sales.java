@@ -1,4 +1,4 @@
-package day17.practice.vo;
+package src.day17.practice.vo;
 
 import lombok.Data;
 
@@ -25,5 +25,10 @@ public class Sales {
 		System.out.println("================");
 	}
 }
+
+
+
+
+
 
 

@@ -1,4 +1,4 @@
-package day27.attendance.controller;
+package src.day27.attendance.controller;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -13,9 +13,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import day27.attendance.vo.Attendance;
-import day27.attendance.vo.AttendanceBook;
-import day27.attendance.vo.Student;
+import src.day26.library.vo.LoanBrowsing;
+import src.day27.attendance.vo.Attendance;
+import src.day27.attendance.vo.AttendanceBook;
+import src.day27.attendance.vo.Student;
 
 public class AttendanceController {
 
@@ -157,6 +158,7 @@ public class AttendanceController {
 		}
 	}
 }
+
 
 
 

@@ -1,4 +1,4 @@
-package day26.library.vo;
+package src.day26.library.vo;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -72,3 +72,11 @@ public class LoanBrowsing implements Serializable {
 	
 	
 }
+
+
+
+
+
+
+
+

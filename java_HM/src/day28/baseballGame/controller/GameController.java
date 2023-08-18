@@ -1,4 +1,4 @@
-package day28.baseballGame.controller;
+package src.day28.baseballgame.controller;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -12,9 +12,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-import day27.attendance.vo.AttendanceBook;
-import day28.baseballGame.vo.BaseballGame;
-import day28.baseballGame.vo.Record;
+import src.day27.attendance.vo.AttendanceBook;
+import src.day28.baseballgame.vo.BaseballGame;
+import src.day28.baseballgame.vo.Record;
 
 public class GameController {
 
@@ -85,6 +85,7 @@ public class GameController {
 		List<Integer> user = new ArrayList<>();
 		int count = 0;
 		do {
+			user.clear();
 			//사용자가 입력
 			System.out.print("user : ");
 			for(int i = 0; i<3; i++) {
@@ -99,7 +100,6 @@ public class GameController {
 			}
 			//결과 출력
 			bbGame.printResult();
-			user.clear();
 			count++;
 		}while(bbGame.getStrike() != 3);
 		//기록 관리(개수제한X)
@@ -117,4 +117,11 @@ public class GameController {
 	}
 
 }
+
+
+
+
+
+
+
 

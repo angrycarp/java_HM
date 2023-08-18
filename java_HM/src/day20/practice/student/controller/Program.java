@@ -1,4 +1,4 @@
-package day20.practice.student.controller;
+package src.day20.practice.student.controller;
 
 public interface Program {
 

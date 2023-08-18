@@ -1,4 +1,4 @@
-package day27.iostream;
+package src.day27.iostream;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

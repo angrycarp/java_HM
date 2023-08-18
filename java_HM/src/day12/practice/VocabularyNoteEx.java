@@ -1,4 +1,4 @@
-package day12.practice;
+package src.day12.practice;
 
 public class VocabularyNoteEx {
 
@@ -13,3 +13,14 @@ public class VocabularyNoteEx {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,10 @@
-package day10.singleton;
+package src.day10.singleton;
 
-public class singleTonEx {
+public class SingleTonEx {
 
 	public static void main(String[] args) {
-		// SamsungCompany company = new SamsungCompany();
+		// TODO Auto-generated method stub
+		//SamsungCompany company = new SamsungCompany();
 		SamsungCompany company1 = SamsungCompany.getInstance();
 		SamsungCompany company2 = SamsungCompany.getInstance();
 		System.out.println(company1);
@@ -11,6 +12,7 @@ public class singleTonEx {
 	}
 
 }
+
 class SamsungCompany{
 	
 	private static SamsungCompany company = new SamsungCompany();
@@ -26,3 +28,9 @@ class SamsungCompany{
 		return company;
 	}
 }
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-package day13.homework.vo;
+package src.day13.homework.vo;
 
 /* 단어장 클래스
  * - 단어들의 모임
@@ -197,5 +197,10 @@ public class VocabularyNote {
 		return false;
 	}
 }
+
+
+
+
+
 
 

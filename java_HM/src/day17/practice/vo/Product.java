@@ -1,4 +1,4 @@
-package day17.practice.vo;
+package src.day17.practice.vo;
 
 import lombok.Data;
 
@@ -60,6 +60,12 @@ public class Product {
 		System.out.println("가격  : " + price);
 	}
 }
+
+
+
+
+
+
 
 
 

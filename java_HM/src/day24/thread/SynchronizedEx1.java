@@ -1,4 +1,4 @@
-package day24.thread;
+package src.day24.thread;
 
 public class SynchronizedEx1 {
 

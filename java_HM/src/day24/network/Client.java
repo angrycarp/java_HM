@@ -1,4 +1,4 @@
-package day24.network;
+package src.day24.network;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -58,3 +58,14 @@ public class Client {
 		t.start();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

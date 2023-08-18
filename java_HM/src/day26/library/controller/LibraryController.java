@@ -1,4 +1,4 @@
-package day26.library.controller;
+package src.day26.library.controller;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -12,8 +12,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import day26.library.vo.Book;
-import day26.library.vo.LoanBrowsing;
+import src.day26.library.vo.Book;
+import src.day26.library.vo.LoanBrowsing;
 
 public class LibraryController {
 	

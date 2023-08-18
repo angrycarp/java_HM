@@ -1,4 +1,4 @@
-package day15.practice.shop.vo;
+package src.day15.practice.shop.vo;
 
 import lombok.Data;
 
@@ -27,7 +27,7 @@ public class Product {
 		this.amount = product.amount;
 		this.category = product.category;
 	}
-	
+
 	//메서드
 	/**제품 입고 기능 => 현재 수량에 주어진 수량을 누적*/
 	public void store(int amount) {
@@ -51,9 +51,17 @@ public class Product {
 	public void print() {
 		System.out.println("제품명 : " + name);
 		System.out.println("모델명 : " + modelName);
-		System.out.println("분류 : " + category);
-		System.out.println("제고 : " + amount);
-		System.out.println("가격 : " + price);
+		System.out.println("분류  : " + category);
+		System.out.println("제고  : " + amount);
+		System.out.println("가격  : " + price);
 	}
 }
+
+
+
+
+
+
+
+
 

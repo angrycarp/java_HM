@@ -123,7 +123,7 @@ CREATE TABLE `seat` (
 	`se_row`	char(1)	NOT NULL, --
 	`se_col`	varchar(2)	NOT NULL, --
 	`se_state`	varchar(10)	NOT NULL DEFAULT '일반', -- 일반/커플/스위트 
-	`sc_num`	int	NOT NULL
+	`se_sc_num`	int	NOT NULL
 );
 
 DROP TABLE IF EXISTS `movie_schedule`;
@@ -135,7 +135,7 @@ CREATE TABLE `movie_schedule` (
 	`ms_date`	date	NOT NULL,--
 	`ms_start_time`	time	NOT NULL,--
 	`ms_end_time`	time	NOT NULL,--
-	`ms_possibe_seat`	int	NOT NULL,--
+	`ms_possible_seat`	int	NOT NULL,--
 	`ms_discount`	char(1)	NOT NULL DEFAULT 'N'--
 );
 
@@ -147,7 +147,7 @@ CREATE TABLE `member` (
 	`me_name`	varchar(20)	NOT NULL,--
 	`me_phone`	varchar(15)	NOT NULL,--
 	`me_birthday`	date	NOT NULL,--
-    `me_authorith` varchar(5) NOT NULL DEFAULT 'USER'
+    `me_authority` varchar(5) NOT NULL DEFAULT 'USER'
 );
 
 DROP TABLE IF EXISTS `reservation`;
@@ -289,7 +289,7 @@ REFERENCES `theater` (
 );
 
 ALTER TABLE `seat` ADD CONSTRAINT `FK_screen_TO_seat_1` FOREIGN KEY (
-	`sc_num`
+	`se_sc_num`
 )
 REFERENCES `screen` (
 	`sc_num`

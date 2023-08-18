@@ -1,4 +1,4 @@
-package day20.practice.student.vo;
+package src.day20.practice.student.vo;
 
 import java.util.Objects;
 

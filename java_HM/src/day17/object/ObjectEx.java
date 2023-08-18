@@ -1,4 +1,4 @@
-package day17.object;
+package src.day17.object;
 
 import java.util.Objects;
 
@@ -87,3 +87,13 @@ class Point2 implements Cloneable{
 		return super.clone();
 	}
 }
+
+
+
+
+
+
+
+
+
+

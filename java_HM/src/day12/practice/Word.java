@@ -1,9 +1,12 @@
-package day12.practice;
+package src.day12.practice;
+
+import lombok.Data;
 
 /* 한 단어를 관리하는 클래스
  *  - 단어
  *  - 뜻들 
  * */
+@Data //getter, setter, toString, equals를 추가
 public class Word{
 	//멤버 변수
 	private String title;
@@ -102,3 +105,16 @@ public class Word{
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

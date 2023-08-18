@@ -1,4 +1,4 @@
-package day19.format;
+package src.day19.format;
 
 import java.text.MessageFormat;
 
@@ -27,3 +27,6 @@ public class MessageFormatEx {
 	}
 
 }
+
+
+

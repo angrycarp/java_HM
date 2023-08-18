@@ -1,6 +1,6 @@
-package day13.homework.run;
+package src.day13.homework.run;
 
-import day13.homework.controller.VocabularyNoteController;
+import src.day13.homework.controller.VocabularyNoteController;
 
 public class Run {
 

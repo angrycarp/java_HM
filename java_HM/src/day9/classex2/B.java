@@ -1,4 +1,4 @@
-package day9.classex2;
+package src.day9.classex2;
 
 public class B {
 	private int num1;

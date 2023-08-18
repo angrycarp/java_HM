@@ -1,4 +1,4 @@
-package day24.network;
+package src.day24.network;
 
 import java.io.IOException;
 import java.io.InputStream;

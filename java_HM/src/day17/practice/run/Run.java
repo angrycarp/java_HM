@@ -1,6 +1,6 @@
-package day17.practice.run;
+package src.day17.practice.run;
 
-import day17.practice.controller.ShopController;
+import src.day17.practice.controller.ShopController;
 
 public class Run {
 

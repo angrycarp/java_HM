@@ -1,4 +1,4 @@
-package day23.stream;
+package src.day23.stream;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
@@ -60,3 +60,8 @@ class Student implements Serializable{
 	private String name;
 	
 }
+
+
+
+
+

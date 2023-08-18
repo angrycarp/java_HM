@@ -1,4 +1,4 @@
-package day22.practice.student.vo;
+package src.day22.practice.student.vo;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Student {
+public class Student{
 	int grade, classNum, num;
 	String name;
 	@Override
@@ -25,5 +25,5 @@ public class Student {
 	public int hashCode() {
 		return Objects.hash(classNum, grade, num);
 	}
-
+	
 }

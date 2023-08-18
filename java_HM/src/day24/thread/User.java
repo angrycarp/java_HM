@@ -1,4 +1,4 @@
-package day24.thread;
+package src.day24.thread;
 
 import lombok.Data;
 
@@ -32,6 +32,8 @@ class Passbook{
 		System.out.println("balance : " + this.balance);
 	}
 }
+
+
 
 
 

@@ -1,4 +1,4 @@
-package day17.practice.vo;
+package src.day17.practice.vo;
 
 import lombok.Data;
 
@@ -49,5 +49,10 @@ public class Customer {
 		System.out.println("전화번호 : " + phoneNumber);
 	}
 }
+
+
+
+
+
 
 

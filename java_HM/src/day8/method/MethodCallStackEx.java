@@ -1,12 +1,11 @@
-package day8.method;
+package src.day8.method;
 
 public class MethodCallStackEx {
 
 	public static void main(String[] args) {
-		// 함수(메소드) 호출 스택 예제
+		/* 함수(메소드) 호출 스택 예제 */
 		method1(1);
-		//method4(); // 재귀 메소드를 잘못 작성한 경우 StackOverFlow가 발생합니다.
-
+		//method4();//재귀 메소드를 잘못 작성한 경우 StackOverFlow가 발생
 	}
 	
 	public static void method1(int a) {
@@ -24,5 +23,9 @@ public class MethodCallStackEx {
 		System.out.println("a");
 		method4();
 	}
-
 }
+
+
+
+
+

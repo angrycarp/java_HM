@@ -1,4 +1,4 @@
-package day19.practice;
+package src.day19.practice;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

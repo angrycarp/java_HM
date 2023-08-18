@@ -1,42 +1,52 @@
-package day8.homework;
-
-import java.util.Scanner;
+package src.day8.homework;
 
 public class MethodScoreEx {
 
 	public static void main(String[] args) {
-		// 성적을 입력받아 학점을 출력하는 코드를 작성하세요.
-		// 단 메서드 이용
-		
-		Scanner sc = new Scanner(System.in);
-		int score;
-		System.out.println("Input score :");
-		score = sc.nextInt();
-		
-		
-		System.out.println("Your score is " + Grade(score));
-
+		/*성적을 입력받아 학점을 출력하는 코드를 작성하세요.*/
+		double score = 10;
+		System.out.println(getGrade(score));
 	}
-	public static char Grade(int num1) {
-		char grade = ' ';
-		if(num1 >= 90 && num1 < 100) {
-			grade = 'A';
+
+	/**성적이 주어지면 학점을 알려주는 메서드
+	 * 매개변수 : 성적 => 실수 => double score
+	 * 리턴타입 : 학점 => 문자열 => String
+	 * 메서드명 : getGrade
+	 */
+	public static String getGrade(double score) {
+		if(score > 100 || score < 0) {
+			return "Wrong score!";
 		}
-		else if(num1 >= 80 && num1 < 90) {
-			grade = 'B';
+		/* 100점 => A
+		 * 90점대 => A
+		 * 80점대 => B
+		 * 70점대 => C
+		 * 60점대 => D
+		 * 그외 => F
+		 * */
+		//성적이 몇점대인지 확인하기 위한 정수
+		//9가 나오면 90점대
+		int res = (int)(score/10);
+		switch(res) {
+		case 10:	
+		case 9:
+			return "A";
+		case 8:
+			return "B";
+		case 7:
+			return "C";
+		case 6:
+			return "D";
+		default:
+			return "F";
+			
 		}
-		else if(num1 >= 70 && num1 < 80) {
-			grade = 'C';
-		}
-		else if(num1 >= 60 && num1 < 70) {
-			grade = 'D';
-		}
-		else if(num1 >= 0 && num1 < 60) {
-			grade = 'E';
-		}
-		else {
-			grade = 'X';
-		}
-		return grade;
 	}
 }
+
+
+
+
+
+
+

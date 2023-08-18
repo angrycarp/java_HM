@@ -1,5 +1,8 @@
-package day13.practice;
+package src.day13.practice;
 
+import lombok.Data;
+
+@Data
 public class Subject {
 	//멤버변수
 	private String title;//과목명 : 국어, 영어, 수학
@@ -48,3 +51,11 @@ public class Subject {
 		System.out.println("total    : " + total);
 	}
 }
+
+
+
+
+
+
+
+

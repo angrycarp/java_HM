@@ -1,6 +1,6 @@
-package day22.practice.phone.run;
+package src.day22.practice.phone.run;
 
-import day22.practice.phone.controller.PhoneManager;
+import src.day22.practice.phone.controller.PhoneManager;
 
 public class PhoneListEx {
 

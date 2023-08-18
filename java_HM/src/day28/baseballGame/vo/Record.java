@@ -1,4 +1,4 @@
-package day28.baseballGame.vo;
+package src.day28.baseballgame.vo;
 
 import java.io.Serializable;
 

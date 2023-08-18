@@ -1,4 +1,4 @@
-package day19.mathex;
+package src.day19.mathex;
 
 public class MathEx {
 

@@ -1,4 +1,4 @@
-package day27.attendance.vo;
+package src.day27.attendance.vo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -66,3 +66,11 @@ public class AttendanceBook implements Serializable {
 	}
 	
 }
+
+
+
+
+
+
+
+

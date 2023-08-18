@@ -1,4 +1,4 @@
-package day19.exception;
+package src.day19.exception;
 
 public class ExceptionEx1 {
 
@@ -27,4 +27,8 @@ class A implements Cloneable{
 		System.out.println(1/0);
 	}
 }
+
+
+
+
 

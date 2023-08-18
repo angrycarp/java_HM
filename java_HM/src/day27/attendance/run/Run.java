@@ -1,6 +1,6 @@
-package day27.attendance.run;
+package src.day27.attendance.run;
 
-import day27.attendance.controller.AttendanceController;
+import src.day27.attendance.controller.AttendanceController;
 
 public class Run {
 

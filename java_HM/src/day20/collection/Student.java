@@ -1,4 +1,4 @@
-package day20.collection;
+package src.day20.collection;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,5 +8,4 @@ import lombok.Data;
 public class Student {
 	private int grade, classNum, num;
 	private String name;
-
 }

@@ -1,4 +1,4 @@
-package day13.practice;
+package src.day13.practice;
 
 public class SubjectEx {
 

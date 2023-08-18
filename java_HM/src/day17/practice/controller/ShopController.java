@@ -1,13 +1,13 @@
-package day17.practice.controller;
+package src.day17.practice.controller;
 
 import java.util.Scanner;
 
-import day17.interfaceex.RunInterface;
-import day17.practice.service.ShopService;
-import day17.practice.service.ShopServiceImp;
-import day17.practice.vo.Customer;
-import day17.practice.vo.Product;
-import day17.practice.vo.Sales;
+import src.day17.interfaceex.RunInterface;
+import src.day17.practice.service.ShopService;
+import src.day17.practice.service.ShopServiceImp;
+import src.day17.practice.vo.Customer;
+import src.day17.practice.vo.Product;
+import src.day17.practice.vo.Sales;
 
 public class ShopController implements RunInterface {
 
@@ -193,4 +193,9 @@ public class ShopController implements RunInterface {
 	}
 	
 }
+
+
+
+
+
 

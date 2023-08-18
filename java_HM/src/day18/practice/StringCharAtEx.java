@@ -1,63 +1,39 @@
-package day18.practice;
+package src.day18.practice;
 
 import java.util.Scanner;
 
 public class StringCharAtEx {
 
 	public static void main(String[] args) {
-		// 영문 소문자로 된 문자열을 입력받아 알파벳이 각각 몇개 있는지 확인하는 코드를 작성하세요.
-		/*	input : hello world
-		 * 	d : 1
-		 * 	e : 1
-		 *  h : 1
-		 *  l : 3
-		 *  o : 2
-		 *  r : 1
-		 *  w : 1
-		 */
-		
 		Scanner sc = new Scanner(System.in);
-		int count = 0, index = 0;
-		char search = 0;
-	
+		int alphabet[] = new int[26];//각 알파벳 개수를 저장하는 배열. 0번지 : a의 개수, 1번지 : b의개수
 		
-		System.out.println("Input : ");
+		//입력
+		System.out.print("input : ");
 		String str = sc.nextLine();
 		
-		
-		// 1. StringIndexOfEx응용 해서 a부터 z까지 반복
-		for(char i = 'a'; i <= 'z'; i++) {
-			do {
-				// Hello world에 l의 위치를 찾음 => lo world에서 l의 위치를 찾음 => o world에서 l의 위치를 찾음
-				// => d에서 l의 위치를 찾음
-				index = str.indexOf(i, ++index);
-				// 찾았으면 개수를 증
-				if(index != -1) {
-					count++;
-				}
-			}while(index != -1);
-			if(count > 0) {
-				System.out.println(i + " : " + count);
-				count = 0;
+		//반복 : 문자열 길이만큼
+		for(int i = 0; i < str.length(); i++) {
+			//문자열의 한글자씩 가져와서 알파벳을 확인하여 알파벳 개수를 증가
+			char ch = str.charAt(i);
+			//ch가 알파벳 소문자인 경우 0~25사이의 값이 나옴
+			int distance = ch - 'a';
+			//영문 소문자가 아닌 경우 
+			if(distance < 0 || distance > 25) {
+				continue;
 			}
+			//맞는 경우
+			alphabet[distance]++;
 		}
-		System.out.println("=============================");
-		
-		// 2. charAt(i)을 이용해서 i번째 글자가 a ~ z까지 중 무엇인지 판별 해당되는 글자 count++
-		// switch case로 a~ z까지 만들고 각각 해야됨 ? 
-		
-		for(char i = 'a'; i <= 'z'; i++) {
-			for(int j = 0; j < str.length(); j++) {
-				search = str.charAt(j);	
-				if(search == i) {
-					count++;
-				}
+		//알파벳 개수 추가
+		for(int i = 0; i<alphabet.length; i++) {
+			
+			if(alphabet[i] == 0) {
+				continue;
 			}
-			if(count > 0) {
-				System.out.println(i + " : " + count);
-				count = 0;
-			}
+			System.out.println((char)('a'+i) + " : " + alphabet[i]);
 		}
 		sc.close();
 	}
+
 }

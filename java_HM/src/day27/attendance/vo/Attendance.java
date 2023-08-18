@@ -1,4 +1,4 @@
-package day27.attendance.vo;
+package src.day27.attendance.vo;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -50,4 +50,17 @@ public class Attendance implements Serializable {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

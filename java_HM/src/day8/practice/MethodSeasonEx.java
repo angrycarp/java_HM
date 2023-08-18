@@ -1,43 +1,59 @@
-package day8.practice;
+package src.day8.practice;
 
 import java.util.Scanner;
 
 public class MethodSeasonEx {
+
 	public static void main(String[] args) {
-		// 월을 입력받아 계절을 출력하는 코드를 작성하세요.
-		
+		//월을 입력받아 계절을 출력하는 코드를 작성하세요.
+		int month;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Input number :");
-		int num;
-		num = sc.nextInt();
+		System.out.println("input month : ");
+		month = sc.nextInt();
 		
-		System.out.println(num + " is " +Season(num));
+		String season = getSeason(month);
+		System.out.println(month + " is " + season);
+		
+		System.out.println(month + " is " + getSeason(month));
 		
 		sc.close();
 	}
-	/** num달에 해당하는 계절을 출력하는 메서드
-	 * 	매개변수 : int num
-	 * 	리턴타입 :	String
-	 * 	함수명 : Season
-	 */
-	
-	public static String Season(int num) {
-		String season = " ";
-		if(num == 3 || num == 4 || num == 5) {
-			season = "Spring";
+	/**월이 주어지면 주어진 월에 맞는 계절을 알려주는 메서드
+	 * 매개변수 : 월 => int month
+	 * 리턴타입 : 계절 => String
+	 * 메서드명 : getSeason 
+	 * */
+	public static String getSeason(int month) {
+		//month가 3이거나 4이거나 5이면 Spring 출력
+		//month가 3과 같거나
+		//month가 4와 같거나
+		//month가 5와 같으면
+		if(month == 3 || month == 4 || month == 5) {
+			return "Spring";
 		}
-		else if(num == 6 || num == 7 || num == 8) {
-			season = "Summer";
+		//month가 6이거나 7이거나 8이면 Summer 출력
+		else if(month == 6 || month == 7 || month == 8) {
+			return "Summer";
 		}
-		else if(num == 9 || num == 10 || num == 11) {
-			season = "Fall";
+		//month가 9이거나 10이거나 11이면 Fall 출력
+		else if(month == 9 || month == 10 || month == 11) {
+			return "Fall";
 		}
-		else if(num == 12 || num == 1 || num == 2) {
-			season = "Winter";
+		//month가 12이거나 1이거나 2이면 Winter 출력
+		else if(month == 12 || month == 1 || month == 2) {
+			return "Winter";
 		}
+		//아니면 Wrong Month 출력
 		else {
-			season = "Wrong month";			
+			return "Wrong Month";
 		}
-		return season;	
 	}
 }
+
+
+
+
+
+
+
+

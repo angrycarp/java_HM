@@ -1,4 +1,4 @@
-package day12.practice;
+package src.day12.practice;
 
 /* 단어장 클래스
  * - 단어들의 모임
@@ -169,3 +169,10 @@ public class VocabularyNote {
 		wordList[index].setTitle(updateTitle);
 	}
 }
+
+
+
+
+
+
+

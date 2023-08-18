@@ -1,6 +1,6 @@
-package day20.practice.student.run;
+package src.day20.practice.student.run;
 
-import day20.practice.student.controller.StudentController;
+import src.day20.practice.student.controller.StudentController;
 
 public class StudentEx {
 

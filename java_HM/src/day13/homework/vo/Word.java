@@ -1,4 +1,4 @@
-package day13.homework.vo;
+package src.day13.homework.vo;
 
 import lombok.Data;
 
@@ -107,4 +107,16 @@ public class Word{
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

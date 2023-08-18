@@ -1,4 +1,4 @@
-package day27.attendance.vo;
+package src.day27.attendance.vo;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -46,3 +46,8 @@ public class Student implements Serializable {
 	
 	
 }
+
+
+
+
+

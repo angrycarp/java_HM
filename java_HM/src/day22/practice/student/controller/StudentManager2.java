@@ -1,11 +1,11 @@
-package day22.practice.student.controller;
+package src.day22.practice.student.controller;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.Predicate;
 
-import day22.practice.student.vo.Student;
+import src.day22.practice.student.vo.Student;
 
 public class StudentManager2 implements Program{
 
@@ -79,3 +79,11 @@ public class StudentManager2 implements Program{
 	}
 
 }
+
+
+
+
+
+
+
+

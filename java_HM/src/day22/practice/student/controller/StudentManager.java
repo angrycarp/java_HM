@@ -1,10 +1,10 @@
-package day22.practice.student.controller;
+package src.day22.practice.student.controller;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import day22.practice.student.vo.Student;
+import src.day22.practice.student.vo.Student;
 
 public class StudentManager implements Program{
 

@@ -1,4 +1,4 @@
-package day19.random;
+package src.day19.random;
 
 import java.util.Random;
 
