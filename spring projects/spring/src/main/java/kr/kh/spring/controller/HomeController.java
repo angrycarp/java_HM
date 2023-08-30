@@ -3,24 +3,21 @@ package kr.kh.spring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
 	
-
-	@RequestMapping(value = "/")
+	@RequestMapping(value="/")
 	public String home(Model model) {
-		//È­¸é¿¡ µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÏ´Â ¹æ¹ı model¿¡ ´ã¿¡¼­ Àü¼Û
-		/*model.addAttribute("È­¸é¿¡¼­ »ç¿ëÇÒ ÀÌ¸§", Àü¼ÛÇÒ°ª);*/
 		model.addAttribute("name", "abc");
 		return "home";
 	}
 	
-	@RequestMapping(value = "/test1")
+	@RequestMapping(value="/test1")
 	public String test1(Model model, String id, Integer age) {
-		System.out.println("¾ÆÀÌµğ : " + id);
-		System.out.println("³ªÀÌ : " + age);
+		System.out.println("ì•„ì´ë”” : " +id);
+		System.out.println("ë‚˜ì´ : " + age);
 		return "test1";
 	}
 	
