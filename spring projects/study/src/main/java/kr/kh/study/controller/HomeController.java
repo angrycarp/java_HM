@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,5 +37,17 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@PostMapping(value="/")
+	public String postNum(Model model) {
+		model.addAttribute("num", 1);
+		return "home";
+	}
+	
+	@GetMapping("/mail")
+	public String mail() {
+		return "/main/mail";
+	}
+	
 	
 }

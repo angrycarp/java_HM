@@ -21,7 +21,7 @@ public class MemberServiceImp implements MemberService {
 	@Override
 	public boolean signup(MemberVO member) {
 		if(member == null) {
-			return false;			
+			return false;
 		}
 		
 		//아이디 중복 확인
@@ -33,19 +33,19 @@ public class MemberServiceImp implements MemberService {
 		//아이디, 비번 null 체크 + 유효성 검사
 		//아이디는 영문으로 시작하고, 6~15자
 		String idRegex = "^[a-zA-Z][a-zA-Z0-9]{5,14}$";
-		//비번은 영문, 숫자, !@#$%로 이루어지고 6~15자
-		String pwRegex = "^[a-zA-Z0!@#$%9]{6,15}$";
+		//비번은 영문,숫자,!@#$%로 이루어지고 6~15자 
+		String pwRegex = "^[a-zA-Z0-9!@#$%]{6,15}$";
 		
-		//아이디가 유효성 검사에 맞지 않으면
+		//아이디가 유효성에 맞지 않으면
 		if(!Pattern.matches(idRegex, member.getMe_id())) {
 			return false;
 		}
-		//비밀번호가 유효성 검사에 맞지 않으면
+		//비번이 유효성에 맞지 않으면
 		if(!Pattern.matches(pwRegex, member.getMe_pw())) {
 			return false;
 		}
 		
-		//비번 암호화
+		//비번 암호화 
 		String encPw = passwordEncoder.encode(member.getMe_pw());
 		member.setMe_pw(encPw);
 		//회원가입
@@ -63,11 +63,24 @@ public class MemberServiceImp implements MemberService {
 			return null;
 		}
 		//비번확인
-		//matches(암호화 안된 문자열, 암호화 된 문자열
+		//matches(암호화안된문자열, 암호화된문자열)
 		if(passwordEncoder.matches(member.getMe_pw(), dbMember.getMe_pw())) {
 			return dbMember;
 		}
 		return null;
+	}
+
+	@Override
+	public void updateMemberSession(MemberVO user) {
+		if(user == null) {
+			return;
+		}
+		memberDao.updateMemberSession(user);
+	}
+
+	@Override
+	public MemberVO getMemberBySession(String session_id) {
+		return memberDao.selectMemberBySession(session_id);
 	}
 
 	
